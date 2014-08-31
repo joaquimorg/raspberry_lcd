@@ -1,5 +1,5 @@
 TARGET = pilcd
-LIBS = -lm
+LIBS = -lm -lcurl
 CC = gcc
 CFLAGS = -g -Wall
 
