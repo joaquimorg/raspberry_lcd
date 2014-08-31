@@ -159,6 +159,51 @@ void GetWeather(void) {
 
         free(data);
         free(tokens);
+
+        if ( strcmp(meteo_ico, "01") == 0 )  				        		
+        	strcpy(meteo_ico, "B");
+        else if ( strcmp(meteo_ico, "02") == 0 )  				        		
+        	strcpy(meteo_ico, "H");
+        else if ( strcmp(meteo_ico, "03") == 0 )  				        		
+        	strcpy(meteo_ico, "3");
+        else if ( strcmp(meteo_ico, "04") == 0 )  				        		
+        	strcpy(meteo_ico, "N");
+        else if ( strcmp(meteo_ico, "05") == 0 )  				        		
+        	strcpy(meteo_ico, "E");
+        else if ( strcmp(meteo_ico, "06") == 0 )  				        		
+        	strcpy(meteo_ico, "R");
+        else if ( strcmp(meteo_ico, "07") == 0 )  				        		
+        	strcpy(meteo_ico, "Q");
+        else if ( strcmp(meteo_ico, "08") == 0 )  				        		
+        	strcpy(meteo_ico, "R");
+        else if ( strcmp(meteo_ico, "09") == 0 )  				        		
+        	strcpy(meteo_ico, "8");
+        else if ( strcmp(meteo_ico, "10") == 0 )  				        		
+        	strcpy(meteo_ico, "7");
+        else if ( strcmp(meteo_ico, "11") == 0 )  				        		
+        	strcpy(meteo_ico, "8");
+        else if ( strcmp(meteo_ico, "12") == 0 )  				        		
+        	strcpy(meteo_ico, "R");
+        else if ( strcmp(meteo_ico, "13") == 0 )  				        		
+        	strcpy(meteo_ico, "R");
+        else if ( strcmp(meteo_ico, "14") == 0 )  				        		
+        	strcpy(meteo_ico, "R");
+        else if ( strcmp(meteo_ico, "15") == 0 )  				        		
+        	strcpy(meteo_ico, "R");
+        else if ( strcmp(meteo_ico, "16") == 0 )  				        		
+        	strcpy(meteo_ico, "L");
+        else if ( strcmp(meteo_ico, "17") == 0 )  				        		
+        	strcpy(meteo_ico, "L");
+        else if ( strcmp(meteo_ico, "18") == 0 )  				        		
+        	strcpy(meteo_ico, "W");
+        else if ( strcmp(meteo_ico, "19") == 0 )  				        		
+        	strcpy(meteo_ico, "Z");
+        else if ( strcmp(meteo_ico, "20") == 0 )  				        		
+        	strcpy(meteo_ico, "6");
+
+  		else		  				
+  			strcpy(meteo_ico, "(");
+       
     }
   
 }
@@ -211,7 +256,7 @@ int main(int argc, char **argv) {
 
 	WriteText(5, 2, buffer, 1);
 
-	WriteText(5, 50, "3", 3);	
+	WriteText(5, 50, meteo_ico, 3);	
 	WriteText(30, 50, "'", 3);
 	sprintf(buffer,"%s/%s", meteo_min, meteo_max);
 	WriteText(50, 55, buffer, 1);
